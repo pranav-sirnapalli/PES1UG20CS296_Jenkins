@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o program_exec program.cpp'
+                sh 'g++ -o file_exec file.cpp'
             }
         }
         stage('Test') {
             steps {
-                sh './program_exec'
+                sh './file_exec'
             }
         }
         stage('Deploy') {
